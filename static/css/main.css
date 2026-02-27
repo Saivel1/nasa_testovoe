@@ -1,0 +1,254 @@
+/* =====================
+   CSS Variables
+   ===================== */
+:root {
+    --bg-dark:      #1c1c1e;
+    --bg-section:   #2a2a2e;
+    --bg-nav:       #1c1c1e;
+    --bg-black:     #111418;
+    --red:          #e8282b;
+    --white:        #ffffff;
+    --text-muted:   #b0b0b8;
+    --font-main:    'Barlow', sans-serif;
+    --nav-border:   rgba(255,255,255,0.1);
+    --thumb-border: rgba(255,255,255,0.35);
+}
+
+/* =====================
+   Base
+   ===================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+/* =====================
+   Navbar
+   ===================== */
+.site-navbar {
+    background-color: var(--bg-nav) !important;
+    border-bottom: 1px solid var(--nav-border);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nasa-logo { display: block; }
+
+.nav-link-custom {
+    color: var(--white) !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    padding: 8px 4px !important;
+    transition: opacity 0.2s;
+}
+.nav-link-custom:hover { opacity: 0.7; }
+
+.btn-login {
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 22px;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+.btn-login:hover { background-color: #c41f22; color: var(--white); }
+
+/* =====================
+   Hero
+   ===================== */
+.hero-section {
+    background-color: var(--bg-black);
+    padding: 70px 0 50px;
+    text-align: center;
+}
+.hero-title {
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* =====================
+   Advantages
+   ===================== */
+.advantages-section {
+    background-color: var(--bg-black);
+    padding: 30px 0 60px;
+}
+
+.earth-wrap { border-radius: 8px; overflow: hidden; line-height: 0; }
+.earth-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.features-grid { padding-left: 30px; }
+
+.feature-cell {
+    padding: 22px 20px 22px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.feature-icon { width: 52px; height: 52px; margin-bottom: 12px; flex-shrink: 0; }
+.feature-icon svg { width: 100%; height: 100%; }
+.feature-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* Mobile earth */
+.earth-wrap-mobile { border-radius: 8px; overflow: hidden; line-height: 0; }
+.earth-img-mobile {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* =====================
+   Photos Section
+   ===================== */
+.photos-section {
+    background-color: var(--bg-section);
+    padding: 60px 0 80px;
+}
+.photos-title {
+    font-weight: 800;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+/* =====================
+   Main Slider
+   ===================== */
+.slider-main-wrap {
+    max-width: 730px;
+    margin: 0 auto 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    line-height: 0;
+}
+.slider-main { line-height: 0; }
+.slide-main-item { outline: none; line-height: 0; }
+.slide-main-item a { display: block; line-height: 0; overflow: hidden; }
+.slide-main-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.slide-main-item a:hover .slide-main-img { transform: scale(1.025); }
+.slide-placeholder { width: 100%; height: 400px; background: #2a2a35; }
+
+/* hide default arrows */
+.slider-main .slick-prev,
+.slider-main .slick-next { display: none !important; }
+
+/* =====================
+   Thumbnails Nav
+   ===================== */
+.slider-nav-outer {
+    max-width: 730px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.slider-arrow {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--red);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+.slider-arrow:hover { background-color: #c41f22; transform: scale(1.08); }
+.slider-nav-inner { flex: 1; overflow: hidden; min-width: 0; }
+.slider-nav { line-height: 0; }
+
+.slide-nav-item { padding: 0 4px; cursor: pointer; outline: none; }
+.slide-nav-img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 3px solid transparent;
+    display: block;
+    filter: brightness(0.6) saturate(0.75);
+    transition: filter 0.2s, border-color 0.2s, transform 0.15s;
+}
+.slick-current .slide-nav-img,
+.slide-nav-item:hover .slide-nav-img {
+    border-color: rgba(255,255,255,0.5);
+    filter: brightness(1) saturate(1);
+    transform: scale(1.04);
+}
+.slide-nav-placeholder {
+    width: 100%;
+    height: 80px;
+    background: #2a2a35;
+    border-radius: 6px;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 991px) {
+    .features-grid { padding-left: 0; }
+    .feature-cell { padding: 16px 12px; }
+    .hero-section { padding: 50px 0 36px; }
+}
+@media (max-width: 767px) {
+    .slide-main-img, .slide-placeholder { height: 260px; }
+    .slider-main-wrap, .slider-nav-outer { max-width: 100%; }
+    .slide-nav-img, .slide-nav-placeholder { height: 64px; }
+    .photos-section { padding: 48px 0 60px; }
+    /* Mobile: hamburger left, logo centered, login right */
+    .site-navbar .container { position: relative; }
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 480px) {
+    .slide-main-img, .slide-placeholder { height: 210px; }
+    .hero-title { font-size: 1.9rem; }
+    .slide-nav-img, .slide-nav-placeholder { height: 56px; }
+    .slider-arrow { width: 34px; height: 34px; }
+}

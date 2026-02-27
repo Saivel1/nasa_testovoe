@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}NASA — Космическое агентство{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-7 col-md-9">
+                <h1 class="hero-title">Космическое агентство</h1>
+                <p class="hero-desc">
+                    Национальное управление по аэронавтике и исследованию космического
+                    пространства — ведомство, относящееся к федеральному правительству
+                    США и подчиняющееся непосредственно президенту США.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ADVANTAGES SECTION ===== -->
+<section id="advantages" class="advantages-section">
+    <div class="container">
+
+        <!-- Desktop layout: image left, 2x2 grid right -->
+        <div class="row align-items-center d-none d-lg-flex">
+
+            <!-- Left: Earth image -->
+            <div class="col-lg-5">
+                <div class="earth-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1280px-The_Earth_seen_from_Apollo_17.jpg"
+                         alt="Земля из космоса" class="earth-img">
+                </div>
+            </div>
+
+            <!-- Right: 2x2 features grid -->
+            <div class="col-lg-7">
+                <div class="row g-0 features-grid">
+                    <div class="col-6 feature-cell">
+                        <div class="feature-icon">
+                            <img src="{% static 'img/fa6-solid_shuttle-space.svg' %}" alt="Logo">
+                        </div>
+                        <p class="feature-text">Спейс шаттлы — пилотируемые корабли</p>
+                    </div>
+                    <div class="col-6 feature-cell">
+                        <div class="feature-icon">
+                            <img src="{% static 'img/ion_telescope.svg' %}" alt="Telescope">
+                            
+                        </div>
+                        <p class="feature-text">Лучшее телескопическое оборудование</p>
+                    </div>
+                    <div class="col-6 feature-cell">
+                        <div class="feature-icon">
+                            <img src="{% static 'img/bi_moon-stars-fill.svg' %}" alt="Moonstar">
+                        </div>
+                        <p class="feature-text">Исследовательские станции на Луне — шаг к новым открытиям!</p>
+                    </div>
+                    <div class="col-6 feature-cell">
+                        <div class="feature-icon">
+                            <img src="{% static 'img/bxs_medal.svg' %}" alt="Medal">
+                        </div>
+                        <p class="feature-text">Золотая медаль по научным исследованиям</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile layout: 2x2 grid top, image bottom -->
+        <div class="d-lg-none">
+            <div class="row g-0 features-grid mb-4">
+                <div class="col-6 feature-cell">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 L50 20 L50 40 L10 30Z" fill="#4a7fd4"/><rect x="8" y="27" width="6" height="6" rx="1" fill="#2a5cb8"/><circle cx="50" cy="30" r="5" fill="#3a6cc8"/></svg>
+                    </div>
+                    <p class="feature-text">Спейс шаттлы — пилотируемые корабли</p>
+                </div>
+                <div class="col-6 feature-cell">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="28" y="10" width="4" height="20" rx="2" fill="#4a7fd4"/><ellipse cx="30" cy="35" rx="14" ry="8" stroke="#4a7fd4" stroke-width="3" fill="none"/><rect x="24" y="40" width="12" height="6" rx="1" fill="#3a6cc8"/></svg>
+                    </div>
+                    <p class="feature-text">Лучшее телескопическое оборудование</p>
+                </div>
+                <div class="col-6 feature-cell">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="32" r="14" fill="#3a4a7a"/><circle cx="25" cy="32" r="12" fill="#4a5a9a"/><circle cx="35" cy="22" r="4" fill="#f0f0ff"/><circle cx="40" cy="18" r="2" fill="#c0d0ff"/><circle cx="43" cy="22" r="1.5" fill="#c0d0ff"/></svg>
+                    </div>
+                    <p class="feature-text">Исследовательские станции на Луне — шаг к новым открытиям!</p>
+                </div>
+                <div class="col-6 feature-cell">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="12" width="20" height="8" rx="2" fill="#3a6cc8"/><rect x="20" y="22" width="20" height="8" rx="2" fill="#4a7fd4"/><polygon points="30,32 36,46 30,42 24,46" fill="#f0c040"/><circle cx="30" cy="38" r="4" fill="#e0a000"/></svg>
+                    </div>
+                    <p class="feature-text">Золотая медаль по научным исследованиям</p>
+                </div>
+            </div>
+
+            <!-- Earth image below on mobile -->
+            <div class="earth-wrap-mobile">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1280px-The_Earth_seen_from_Apollo_17.jpg"
+                     alt="Земля из космоса" class="earth-img-mobile">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== PHOTOS SECTION ===== -->
+<section id="photos" class="photos-section">
+    <div class="container">
+        <h2 class="photos-title">Фотографии</h2>
+
+        {% if slides %}
+
+        <!-- Main big slider -->
+        <div class="slider-main-wrap">
+            <div class="slider-main">
+                {% for slide in slides %}
+                <div class="slide-main-item">
+                    <a href="{{ slide.image.url }}"
+                       class="glightbox"
+                       data-gallery="nasa-gallery"
+                       data-title="{{ slide.title }}"
+                       {% if slide.description %}data-description="{{ slide.description }}"{% endif %}>
+                        {% if slide.image %}
+                        <img src="{{ slide.image.url }}" alt="{{ slide.title }}" class="slide-main-img">
+                        {% else %}
+                        <div class="slide-placeholder"></div>
+                        {% endif %}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Thumbnails nav with prev/next arrows -->
+        <div class="slider-nav-outer">
+            <button class="slider-arrow slider-arrow-prev" id="slickPrev">
+                <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+
+            <div class="slider-nav-inner">
+                <div class="slider-nav">
+                    {% for slide in slides %}
+                    <div class="slide-nav-item {% if forloop.first %}active{% endif %}">
+                        {% if slide.image %}
+                        <img src="{{ slide.image.url }}" alt="{{ slide.title }}" class="slide-nav-img">
+                        {% else %}
+                        <div class="slide-nav-placeholder"></div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <button class="slider-arrow slider-arrow-next" id="slickNext">
+                <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+        </div>
+
+        {% else %}
+        <div class="text-center py-5">
+            <p class="text-muted">Слайды пока не добавлены. <a href="/admin/" class="text-light">Добавить в админке →</a></p>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+{% endblock %}
